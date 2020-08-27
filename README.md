@@ -38,9 +38,13 @@ valine:
     enableCounter: false
 ```
 
-### 3 导航栏和图标
+### 3 导航栏和图标(没有配置化，需要写死)
 - 导航栏：当前没有配置化，需要修改`themes/tree/layout/_partial` 路径下的 `header.ejs` 文件
 - 图标：替换`themes/tree/source` 路径下的`favicon.ico` 文件
+-about：
+<li class="menu-item">
+	<a href="https://jiangjiawei520.github.io/hexo_notes.github.io/about/index.html" class="menu-item-link">ABOUT</a>
+</li>
 
 ### 4 about 页
 在 `source`路径下，与`_posts`文件夹平行，建立一个`about`页
