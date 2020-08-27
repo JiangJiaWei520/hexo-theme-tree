@@ -70,3 +70,37 @@ highlight:
 
 ### 访问管理
 我自己用的是百度统计 https://tongji.baidu.com ，很简单，注册后在 'head' 里加一个 '<script>' 块就行了
+1. 新版统计代码获取
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?xxxxxxxxxxxxxxxxxx";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+2. 代码安装说明
+
+      a、请将代码添加到网站全部页面的</head>标签前。
+
+      b、在header.ejs的页头模板页面中安装，以达到一处安装，全站皆有的效果。
+
+
+
+ 3.检查
+
+您可以用浏览器自带的开发者工具进行手动查看，非常便捷。
+
+> 方法一：用Chrome 浏览器查看代码是否已安装方法：
+
+①打开要检查的网页，右键点击弹出菜单中的审查元素（或直接按F12），打开开发者工具控制台。
+
+②选中控制台上方的Network 按钮，按照页面提示进行操作
+
+③F5 刷新下页面，检查表格中是否有名字是hm.js？的项，若有，则证明已安装百度统计代码。若无，则证明未安装。
+
+④进阶：如果有hm.js 项（或者h.js，hm.js 表示异步代码，h.js表示访问分析代码），但在百度统计里看不到网站数据（pv等），则有可能是装错了代码。需要检查是否装对代码。
+
